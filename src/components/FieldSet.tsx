@@ -19,12 +19,11 @@ export const FieldSet = React.forwardRef<HTMLFieldSetElement, FieldSetProps>(
     },
     ref,
   ) => {
-    console.log("errorMessage", errorMessage, isRequired, className, label);
     return (
       <fieldset
         ref={ref}
         {...htmlProps}
-        className={`${className} flex flex-col gap-2 group ${errorMessage ? "[&>input]:border-red-500" : ""}`}
+        className={`${className} grid gap-2 group ${errorMessage ? "[&>input]:border-red-500" : ""}`}
       >
         <label
           className={`${isRequired ? "after:content-['*']" : ""} after:p-2`}
